@@ -48,14 +48,14 @@ endGame.onclick=function()
 function gameStart()
 {
     timeNum.innerHTML=currentTime;
-    information.innerHTML="ÓÎÏ·¿ªÊ¼£¡"
+    information.innerHTML="æ¸¸æˆå¼€å§‹ï¼"
     currentTime++;
     timeout=setTimeout("gameStart();",1000);
 }
 function gameEnd()
 {
     clearTimeout(timeout);
-    information.innerHTML="ÓÎÏ·ÉĞÎ´¿ªÊ¼£¡";
+    information.innerHTML="æ¸¸æˆå°šæœªå¼€å§‹ï¼";
     currentTime=0;
     timeNum.innerHTML=currentTime;
     for(var i=0;i<80;i++)
@@ -129,18 +129,18 @@ function colorChange()
             {
                 clearTimeout(timeout);
                 currentTime--;
-                information.innerHTML="³É¹¦Íê³É£¡";
+                information.innerHTML="æˆåŠŸå®Œæˆï¼";
                 var grade;
                 var name;
                 if(!localStorage.getItem("grade"))
                 {
-                    console.log("ÖØĞÂ¿ªÊ¼");
+                    console.log("é‡æ–°å¼€å§‹");
                     grade=new Array();
                     name=new Array();
                     grade[0]=currentTime;
-                    name[0]=prompt("¹§Ï²Äú³É¹¦Íê³É£¬ÇëÊäÈëÄúµÄĞÕÃû","bingo");
+                    name[0]=prompt("æ­å–œæ‚¨æˆåŠŸå®Œæˆï¼Œè¯·è¾“å…¥æ‚¨çš„å§“å","bingo");
                     if(name[0]=="")
-                        name[0]="ÄäÃûÓÃ»§";
+                        name[0]="åŒ¿åç”¨æˆ·";
                     localStorage.setItem("grade",JSON.stringify(grade));
                     localStorage.setItem("name",JSON.stringify(name));
                 }
@@ -156,7 +156,7 @@ function colorChange()
                         if(grade[i]<currentTime)
                             continue;
                         
-                        // console.log("²åÈëÖĞ¼ä\nÎ»ÖÃ:",i,"\ngrade.length:"+grade.length,"\n")
+                        // console.log("æ’å…¥ä¸­é—´\nä½ç½®:",i,"\ngrade.length:"+grade.length,"\n")
                         for(j=grade.length;j>i;j--)
                         {
                             grade[j]=grade[j-1];
@@ -164,17 +164,17 @@ function colorChange()
                         }
 
                         grade[i]=currentTime;
-                        name[i]=prompt("¹§Ï²Äú³É¹¦Íê³É£¬ÇëÊäÈëÄúµÄĞÕÃû","bingo");
+                        name[i]=prompt("æ­å–œæ‚¨æˆåŠŸå®Œæˆï¼Œè¯·è¾“å…¥æ‚¨çš„å§“å","bingo");
                         if(name[i]=="")
-                            name[i]="ÄäÃûÓÃ»§"
+                            name[i]="åŒ¿åç”¨æˆ·"
                         break;
                     }
                     if(i==grade.length)
                     {
                         grade[i]=currentTime;
-                        name[i]=prompt("¹§Ï²Äú³É¹¦Íê³É£¬ÇëÊäÈëÄúµÄĞÕÃû","bingo");
+                        name[i]=prompt("æ­å–œæ‚¨æˆåŠŸå®Œæˆï¼Œè¯·è¾“å…¥æ‚¨çš„å§“å","bingo");
                         if(name[i]=="")
-                            name[i]="ÄäÃûÓÃ»§"
+                            name[i]="åŒ¿åç”¨æˆ·"
                     }
                     localStorage.setItem("grade",JSON.stringify(grade));
                     localStorage.setItem("name",JSON.stringify(name));
@@ -195,7 +195,7 @@ function review()
     grade=JSON.parse(localStorage.getItem("grade"));
     name=JSON.parse(localStorage.getItem("name"));
 
-    var innerText="<thead class='w-100 thead-light'><tr class='row'><th class='col-6'>Íæ¼Ò</th><th class='col-6'>³É¼¨</th></tr></thead>";
+    var innerText="<thead class='w-100 thead-light'><tr class='row'><th class='col-6'>ç©å®¶</th><th class='col-6'>æˆç»©</th></tr></thead>";
     innerText+="<tbody class='w-100'>";
     for(var i in grade)
     {

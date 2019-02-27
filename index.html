@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="gbk" />
-        <title>һ������С��Ϸ</title>
+        <meta charset="utf-8" />
+        <title>一个测试小游戏</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="images/ico.png" />
         <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -18,18 +18,18 @@
                 <div class="col-xl-3 m-auto">
                     <div class="row">
                         <div class="col">
-                            <button type="button" class="btn btn-primary btn-block" id="startGame"><b>��ʼ��Ϸ</b></button>
+                            <button type="button" class="btn btn-primary btn-block" id="startGame"><b>开始游戏</b></button>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-danger btn-block" id="endGame"><b>����</b></button>
+                            <button type="button" class="btn btn-danger btn-block" id="endGame"><b>放弃</b></button>
                         </div>
                     </div>
-                    <p id="timeCalculate"><span class="badge badge-info">����ʱ <span class="badge badge-dark" id="timeNum">0</span> S</span></p>
-                    <p id="information">��Ϸ��δ��ʼ��</p>
+                    <p id="timeCalculate"><span class="badge badge-info">已用时 <span class="badge badge-dark" id="timeNum">0</span> S</span></p>
+                    <p id="information">游戏尚未开始！</p>
                     <div class="card">
-                        <div class="card-header">���</div>
-                        <div class="card-body">����ѧϰ��һЩjavascript����֪ʶ֮����������������£�����Ϊ���˳����������д��ʱ����������⣬������javascript�����ִ��˳�����⣬ʹ��ѭ�������ö����ť�ĵ����Ӧ��Ȼ��������ò�ͬ����������ִ�й��̲�ͬ����֮ǰ�Ӵ��ı���ִ��������ԣ��е㲻ϰ�ߣ����Ⲽ��Ҳ����һЩʱ�䡣</div>
-                        <div class="card-footer">�ʺ���Ⱥ��<span class="badge badge-warning" style="font-size:1rem;">����</span>���������ָ�</div>
+                        <div class="card-header">简介</div>
+                        <div class="card-body">我在学习了一些javascript基本知识之后，用这个来测试以下，本以为会很顺利。但是在写的时候发现诸多问题，尤其是javascript代码的执行顺序问题，使用循环来设置多个按钮的点击响应居然与逐个设置不同，这个代码的执行过程不同于我之前接触的编译执行类的语言，有点不习惯，另外布局也花了一些时间。</div>
+                        <div class="card-footer">适合人群：<span class="badge badge-warning" style="font-size:1rem;">智障</span>进行智力恢复</div>
                     </div>
                 </div>
                 <div class="col-xl-7">
@@ -41,13 +41,13 @@
                     </div>
                 </div>
                 <div class="col-xl-2" style="overflow:auto;">
-                    <p id="paihang">���а�</p>
+                    <p id="paihang">排行榜</p>
                     <div class="col-row" style="height:600px;margin:0;padding:0;">
                         <table class="table table-hover" id="table">
                             <thead">
                                 <tr>
-                                    <th>���</th>
-                                    <th>�ɼ�</th>
+                                    <th>玩家</th>
+                                    <th>成绩</th>
                                 </tr>
                             </thead>
                             <!-- <tbody>
@@ -67,26 +67,26 @@
                         </table>
                     </div>
                 </div>
-                    <!-- ��ť�����ڴ�ģ̬�� -->
+                    <!-- 按钮：用于打开模态框 -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="openInfo">
-                        ��ģ̬��
+                        打开模态框
                     </button>
-                    <!-- ģ̬�� -->
+                    <!-- 模态框 -->
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-sm">
                             <div class="modal-content">
-                                <!-- ģ̬��ͷ�� -->
+                                <!-- 模态框头部 -->
                                 <div class="modal-header">
-                                    <h4 class="modal-title">͵͵������</h4>
+                                    <h4 class="modal-title">偷偷告诉你</h4>
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
-                                <!-- ģ̬������ -->
+                                <!-- 模态框主体 -->
                                 <div class="modal-body text-info">
-                                    ��Ϸ��δ��ʼŶ
+                                    游戏尚未开始哦
                                 </div>
-                                <!-- ģ̬��ײ� -->
+                                <!-- 模态框底部 -->
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">�ر�</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">关闭</button>
                                 </div>
                             </div>
                         </div>
