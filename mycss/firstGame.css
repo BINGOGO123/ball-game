@@ -1,0 +1,94 @@
+#gameDiv button
+{
+    width:60px;
+    margin:10px;
+    height:60px;
+    font-size:1.6rem;
+    color:green;
+}
+
+#gameDiv button:hover
+{
+    background-color:rgba(63, 122, 231, 0.6) !important;
+}
+
+#timeCalculate
+{
+    margin-top:20px;
+    display:block;
+
+}
+#timeCalculate>span
+{
+    display:block;
+    padding-top:30px;
+    padding-bottom:30px;
+    font-size:2rem;
+}
+#timeCalculate>span span
+{
+    font-size:2rem;
+    border-radius:20px;
+    background-color:rgb(23, 46, 97);
+}
+
+#openInfo
+{
+    display:none;
+}
+
+#information
+{
+    background-color:rgb(245, 141, 22);
+    color:white;
+    font-size:2rem;
+    border-radius:5px;
+    text-align:center;
+    padding:10px 0 10px 0;
+}
+
+#paihang
+{
+    background-color:rgb(40, 161, 100);
+    color:white;
+    font-size:1rem;
+    border-radius:5px;
+    text-align:center;
+    padding:10px 0 10px 0;
+    margin-top:20px;
+}
+
+#gameDiv
+{
+    width:802px;
+    margin:20px;
+    border-radius:20px/50px;
+}
+
+@media only screen and (max-width:1500px)
+{    
+    #gameDiv
+    {
+        width:100%;
+    }
+}
+
+@media only screen and (max-width:1200px)
+{
+    #startGame
+    {
+        margin-top:20px;
+    }
+    #endGame
+    {
+        margin-top:20px;
+    }
+}
+
+@media only screen and (max-width:802px)
+{    
+    #gameDiv
+    {
+        width:100%;
+    }
+}
