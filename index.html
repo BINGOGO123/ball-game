@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="gbk" />
+        <title>一个测试小游戏</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="images/ico.png" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="mycss/firstGame.css" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 m-auto">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary btn-block" id="startGame"><b>开始游戏</b></button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger btn-block" id="endGame"><b>放弃</b></button>
+                        </div>
+                    </div>
+                    <p id="timeCalculate"><span class="badge badge-info">已用时 <span class="badge badge-dark" id="timeNum">0</span> S</span></p>
+                    <p id="information">游戏尚未开始！</p>
+                    <div class="card">
+                        <div class="card-header">简介</div>
+                        <div class="card-body">我在学习了一些javascript基本知识之后，用这个来测试以下，本以为会很顺利。但是在写的时候发现诸多问题，尤其是javascript代码的执行顺序问题，使用循环来设置多个按钮的点击响应居然与逐个设置不同，这个代码的执行过程不同于我之前接触的编译执行类的语言，有点不习惯，另外布局也花了一些时间。</div>
+                        <div class="card-footer">适合人群：<span class="badge badge-warning" style="font-size:1rem;">智障</span>进行智力恢复</div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="mx-auto border border-primary" id="gameDiv">
+                        <script>
+                            for(var i=0;i<80;i++)
+                                document.write('<button type="button" name="button" class="btn btn-outline-primary border border-info rounded-circle"></button>');
+                        </script>
+                    </div>
+                </div>
+                <div class="col-xl-2" style="overflow:auto;">
+                    <p id="paihang">排行榜</p>
+                    <div class="col-row" style="height:600px;margin:0;padding:0;">
+                        <table class="table table-hover" id="table">
+                            <thead">
+                                <tr>
+                                    <th>玩家</th>
+                                    <th>成绩</th>
+                                </tr>
+                            </thead>
+                            <!-- <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                </tr>
+                                <tr>
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                </tr>
+                            </tbody> -->
+                        </table>
+                    </div>
+                </div>
+                    <!-- 按钮：用于打开模态框 -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="openInfo">
+                        打开模态框
+                    </button>
+                    <!-- 模态框 -->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <!-- 模态框头部 -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">偷偷告诉你</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <!-- 模态框主体 -->
+                                <div class="modal-body text-info">
+                                    游戏尚未开始哦
+                                </div>
+                                <!-- 模态框底部 -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script/firstGame.js"></script>
+    </body>
+</html>
